@@ -42,10 +42,10 @@ public class FindBiggest {
 		  while(iter.hasNext()) {
 			  Map.Entry   entry =  (Entry) iter.next();
 			  System.out.println(entry);
-			  
-			  if(maxvalue < (int) entry.getValue() ) {
+			  System.out.println(entry.getValue());
+			  if(maxvalue < Integer.parseInt(  entry.getValue().toString() ) ) {
 				  str = (String) entry.getKey();
-				  maxvalue =  (int) entry.getValue();
+				  maxvalue = Integer.parseInt(  entry.getValue().toString() ) ;
 			  }
 			 
 			  
