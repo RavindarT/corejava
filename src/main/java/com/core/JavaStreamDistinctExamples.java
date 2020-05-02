@@ -20,7 +20,7 @@ public class JavaStreamDistinctExamples
         Collection<Person> list = Arrays.asList(lokesh,brian,alex,lokesh,brian,lokesh);
  
         // Get distinct objects by key
-        List<Person> distinctElements = list.stream()
+        List<Object> distinctElements = list.stream()
                                             .filter( distinctByKey(null) )
                                             .collect( Collectors.toList() );
  
@@ -31,7 +31,7 @@ public class JavaStreamDistinctExamples
         //Utility function
     public static <T> Predicate<T> distinctByKey(Function<? super T, Object> keyExtractor) 
     {
-        Map<Object, Boolean> map = new ConcurrentHashMap<>();
+        Map<Object, Boolean> map = new ConcurrentHashMap<Object, Boolean>();
         return t -> map.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == null;
     }
 }
