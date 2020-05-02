@@ -1,0 +1,7 @@
+UndeliveredOrder
+
+SuperHeroesName
+SELECT NAME
+from SUPERHERO 
+WHERE length(NAME) <= 6 
+ORDER BY SUPERHERO.ID;

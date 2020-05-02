@@ -1,0 +1,19 @@
+PerfectArrangement
+
+Select ID, FIRST_NAME, LAST_NAME 
+FROM CUSTOMER
+WHERE LENGTH(CONCAT(FIRST_NAME,LAST_NAME)) < 12 
+ORDER BY LENGTH(CONCAT(FIRST_NAME,LAST_NAME)), 
+		 CONCAT(FIRST_NAME,LAST_NAME), 
+		 ID;
+
+		
+SELECT CO.Id, CO.First_Name, CO.Last_Name 
+FROM (
+		select distinct CI.Id, LEN(CI.First_name + CI.Last_Name) AS NameLen, CI.First_Name, CI.Last_Name, CI.First_Name + CI.Last_Name AS CName
+		from Customer CI 
+		GROUP BY CI.Id, CI.First_Name, CI.Last_Name
+	) CO 
+where CO.NameLen < 12
+ORDER BY CO.NameLen ASC, CO.CName ASC, CO.Id ASC;
+		
