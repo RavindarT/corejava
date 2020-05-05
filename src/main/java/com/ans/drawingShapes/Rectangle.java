@@ -1,4 +1,4 @@
-package com.drawingShapes;
+package com.ans.drawingShapes;
 
 class Rectangle extends Shape { 
 	public void drawShape() { 

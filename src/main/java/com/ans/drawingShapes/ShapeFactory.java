@@ -1,4 +1,4 @@
-package com.drawingShapes;
+package com.ans.drawingShapes;
 
 class ShapeFactory {
 	public void drawShape(String type){

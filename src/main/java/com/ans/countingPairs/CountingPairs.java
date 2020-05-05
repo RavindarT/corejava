@@ -1,4 +1,4 @@
-package com.countingPairs;
+package com.ans.countingPairs;
 
 import java.util.ArrayList;
 import java.util.HashSet;

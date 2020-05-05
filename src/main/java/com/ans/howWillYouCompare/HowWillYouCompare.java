@@ -1,4 +1,4 @@
-package com.howWillYouCompare;
+package com.ans.howWillYouCompare;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.addingNumber;
+package com.ans.addingNumber;
 
 public class AddingNumber {
 	

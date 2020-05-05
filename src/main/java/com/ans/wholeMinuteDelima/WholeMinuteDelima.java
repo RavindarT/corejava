@@ -1,4 +1,4 @@
-package com.wholeMinuteDelima;
+package com.ans.wholeMinuteDelima;
 
 import java.util.List;
 

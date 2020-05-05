@@ -1,4 +1,4 @@
-package com.coderFriends;
+package com.ans.coderFriends;
 
 public class CoderFriends {
 

@@ -1,4 +1,4 @@
-package com.palindromeCounter;
+package com.ans.palindromeCounter;
 
 public class PalindromeCounter {
 
