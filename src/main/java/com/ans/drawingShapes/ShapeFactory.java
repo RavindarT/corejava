@@ -1,22 +1,26 @@
 package com.ans.drawingShapes;
 
-class ShapeFactory {
-	public void drawShape(String type){
+public class ShapeFactory {
+	
+	public Shape createObject(String type){
+		Shape s = null;
 		switch(type){ 
 			case "Square":
-				Square square = new Square();
-				square.drawShape(); 
+				s = new Square();
+				//s.drawShape(); 
 				break; 
 			case "Circle": 
-				Circle circle = new Circle(); 
-				circle.drawShape(); 
+				s  = new Circle(); 
+				//s.drawShape(); 
 				break; 
 			case "Rectangle":
-				Rectangle rectangle = new Rectangle(); 
-				rectangle.drawShape();
+				 s = new Rectangle(); 
+				//s.drawShape();
 				break; 
 			default: 
 				System.out.println("Drawing "+type+" is not supported");
+				s = new Undefined();
 		}
+		return s;
 	}
 }
