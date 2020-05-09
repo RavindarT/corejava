@@ -7,7 +7,7 @@ public class AddingNumber {
 	}
 	
 	public static int addNumbers(float a, float b) { 
-		// Write your code here 
+		
 		return (int)(a+b);  
 	} 
 	
