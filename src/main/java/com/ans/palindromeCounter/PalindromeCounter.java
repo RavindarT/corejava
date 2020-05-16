@@ -4,9 +4,51 @@ public class PalindromeCounter {
 
 	
 public static void main(String a[]) {
+//		int n = 4;
+//		String st = "abca";
+//		for(int i = n; i == 0 ; i--) {
+//			
+//		}
+		String as= "abca";
+		int i = possiblePalinByRemovingOneChar(as);
+		System.out.println(  as.charAt(i) );
 		
 	}
 	
+
+static int possiblePalinByRemovingOneChar(String str) 
+{     
+    int low = 0, high = str.length() - 1; 
+    while (low < high)  
+    { 
+        if (str.charAt(low) == str.charAt(high))  
+        { 
+            low++; 
+            high--; 
+        }  
+        else
+        { 
+            if (isPalindrome(str, low + 1, high)) 
+                return low; 
+
+            if (isPalindrome(str, low, high - 1)) 
+                return high; 
+            return -1; 
+        } 
+    }     
+    return -2; 
+} 
+
+static boolean isPalindrome(String str, int low, int high){ 
+	while (low < high)  { 
+		if (str.charAt(low) != str.charAt(high)) 
+			return false; 
+		low++; 
+		high--; 
+	} 
+	return true; 
+} 
+
 	  public static int countPalindromes(String s) { 
 		  // Write your code here      
 		  int Number = s.length(), l = 0; 
