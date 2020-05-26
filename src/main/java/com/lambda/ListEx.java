@@ -49,6 +49,12 @@ public class ListEx {
 					cnt = cnt + a.getSalary();
 				});
 			
+//			employeeList.stream()
+//			.filter( Employee::isManager(s)	)
+//			.forEach(a -> {
+//				cnt = cnt + a.getSalary();
+//			});
+			
 			System.out.println(s+":::"+cnt);
 		
 		}
@@ -89,5 +95,7 @@ class Employee{
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
-	
+	public boolean isManager(String a) {
+		return a.equalsIgnoreCase(a);
+	}
 }
